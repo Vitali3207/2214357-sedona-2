@@ -375,9 +375,8 @@ body {
 }
 
 .search-link {
-  font-size: 20px;
-  line-height: 36px;
-  padding: 8px 50px;
+  background-color: #756157;
+  border-radius: 4px;
 }
 
 .subscription {

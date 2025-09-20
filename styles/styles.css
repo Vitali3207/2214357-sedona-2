@@ -226,14 +226,18 @@ body {
 }
 
 .advantages-wrapper {
-  padding: 102px 85px;
+  padding: 102px 74px;
 }
 
 .advantages-item {
-  width: 400px;
+  width: calc(100% / 3);
   min-height: 385px;
   box-sizing: border-box;
-  padding: 112px 85px;
+  padding: 102px 74px;
+}
+
+.advantages-item:nth-child(3) {
+  background-color: #83b3d333;
 }
 
 .advantages-item img {
@@ -241,6 +245,7 @@ body {
 }
 
 .advantages-item h3{
+  position: relative;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -251,6 +256,22 @@ body {
   margin-bottom: 62px;
 }
 
+.advantages-item h3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #000000;
+  opacity: 0.3;
+  top: 80px;
+  left: 95px;
+}
+
+.advantages-item-image h3::after {
+  background-color: #ffffff;
+}
+
 .advantages-item p {
   font-size: 18px;
   line-height: 21px;
@@ -259,26 +280,20 @@ body {
 }
 
 .advantages-item-image{
+  width: 100%;
   display: flex;
   background-color: #82b3d3;
+  padding: 0;
 }
 
 .advantages-item-image h3 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-   color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 62px;
+  color: #ffffff;
 }
 
 .advantages-item-image p {
-  text-align: center;
   color: #ffffff;
-  margin: 0;
 }
+
 
 .advantages-item-reverse {
   flex-direction: row-reverse;
@@ -316,7 +331,7 @@ body {
 }
 
 .advertising-item {
-  width: 400px;
+  width: calc(100% / 3);
   min-height: 385px;
   display: flex;
   flex-direction: column;
@@ -592,6 +607,63 @@ input[type= "radio"]:checked {
   background-position: center;
 }
 
+.price-input {
+  position: relative;
+  width: 288px;
+  display: flex;
+  gap: 2px;
+  margin-bottom: 36px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.label-from {
+  position: absolute;
+  left: 108px;
+  top: 13px;
+  z-index: 1;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.input-from {
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.label-to {
+  position: absolute;
+  left: 250px;
+  top: 13px;
+  z-index: 1;
+}
+
+.input-to {
+  border-radius: 0 4px 4px 0;
+  outline: none;
+}
+
+input[type= "number"] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 143px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  padding-left: 20px;
+}
+
 input[type=range] {
   height: 4px;
   appearance: none;
@@ -649,6 +721,8 @@ input[type=range]::-webkit-slider-runnable-track {
 .sorting {
   width: 292px;
   height: 49px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
 }
 
 .cards-view-list {

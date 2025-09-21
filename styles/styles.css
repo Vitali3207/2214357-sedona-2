@@ -686,7 +686,7 @@ input[type='range']::-webkit-slider-thumb {
 -webkit-appearance: none;
 }
 
-.scale-progres {
+.scale-progress {
   width: 226px;
   height: 4px;
   background-color: #ffffff;
@@ -695,7 +695,7 @@ input[type='range']::-webkit-slider-thumb {
   right: -3px;
 }
 
-.scale-progres::before {
+.scale-progress::before {
   content: "";
   display: block;
   position: absolute;
@@ -707,7 +707,7 @@ input[type='range']::-webkit-slider-thumb {
   left: 206px;
 }
 
-.scale-progres::after {
+.scale-progress::after {
   content: "";
   display: block;
   position: absolute;

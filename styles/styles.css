@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -31,6 +31,10 @@ img {
   object-fit: contain;
 }
 
+a {
+  cursor: pointer;
+}
+
 .button {
   display: inline-flex;
   justify-content: center;
@@ -49,6 +53,7 @@ img {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 
 .button-small {
@@ -154,8 +159,8 @@ body {
 
 .user-counter {
   position: absolute;
-  bottom: 32px;
-  left: 22px;
+  bottom: 30px;
+  left: 20px;
   width: 20px;
   height: 20px;
   font-weight: 400;
@@ -226,14 +231,14 @@ body {
 }
 
 .advantages-wrapper {
-  padding: 102px 74px;
+  padding: 102px 85px;
 }
 
 .advantages-item {
   width: calc(100% / 3);
   min-height: 385px;
   box-sizing: border-box;
-  padding: 102px 74px;
+  padding: 102px 85px;
   background-color: #83B3D31F;
 }
 
@@ -266,7 +271,7 @@ body {
   background-color: #000000;
   opacity: 0.3;
   top: 80px;
-  left: 95px;
+  left: 80px;
 }
 
 .advantages-item-image h3::after {
@@ -337,12 +342,26 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 77px 79px;
+  padding: 81px 85px;
   background-color: #83B3D31F;
+  background-repeat: no-repeat;
+  background-position: 50% 80px;
+}
+
+.advertising-item-first {
+  background-image: url(../images/svg/icon-home.svg);
+}
+
+.advertising-item-second {
+  background-image: url(../images/svg/icon-food.svg);
+}
+
+.advertising-item-third {
+  background-image: url(../images/svg/icon-gift.svg);
 }
 
 .advertising-item:nth-child(2) {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .advertising-item object {
@@ -358,7 +377,7 @@ body {
   text-align: center;
   color: #000000;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 102px;
   margin-bottom: 30px;
 }
 
@@ -519,6 +538,7 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
 .link-hotel {
@@ -542,6 +562,7 @@ body {
   background-image: url("../images/svg/breadcrumbs.svg");
   background-repeat: no-repeat;
   left: -18px;
+  top: 6px;
 }
 
 .filter-group {
@@ -583,7 +604,7 @@ body {
 .input-text{
   line-height: 23px;
   color: #ffffff;
-  margin-left: 16px;
+  padding-left: 16px;
 }
 
 input[type= "checkbox"] {
@@ -603,120 +624,116 @@ input[type= "checkbox"]:checked {
 }
 
 input[type= "radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   width: 20px;
   height: 20px;
-  background-color: #ffffff;
   border-radius: 50%;
-  cursor: pointer;
-  margin: 0;
+  background-color: #ffffff;
 }
 
 input[type= "radio"]:checked {
-  background-image: url("../images/svg/radio.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #3F5E72;
+  box-shadow: inset 0 0 0 5px #ffffff;
 }
 
-.price-input {
-  position: relative;
+.price-inputs {
   width: 288px;
   display: flex;
   gap: 2px;
   margin-bottom: 44px;
 }
 
+.price-input {
+  width: 100%;
+  position: relative;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 input[type='number'] {
-  appearance: none;
-  -moz-appearance: textfield;
-}
-
-.label-from {
-  position: absolute;
-  left: 108px;
-  top: 13px;
-  opacity: 0.3;
-}
-
-.input-from {
-  border-radius: 4px 0 0 4px;
-  outline: none;
-}
-
-.label-to {
-  position: absolute;
-  left: 250px;
-  top: 13px;
-  opacity: 0.3;
-}
-
-.input-to {
-  border-radius: 0 4px 4px 0;
-  outline: none;
-}
-
-input[type= "number"] {
   margin: 0;
   padding: 0;
   border: none;
-  width: 143px;
+  width: 100%;
   height: 48px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
   padding-left: 20px;
+  box-sizing: border-box;
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
-input[type=range] {
+.input {
+  outline: none;
+  font-family: inherit;
+}
+
+.input-from {
+  border-radius: 4px 0 0 4px;
+}
+
+.input-to {
+  border-radius: 0 4px 4px 0;
+}
+
+.lable-input {
   position: absolute;
-  width: 287px;
-  height: 4px;
-  appearance: none;
-  background-color: #ffffff;
+  top: 50%;
+  transform: translateY(-10px);
+  left: 75%;
   opacity: 0.3;
 }
 
-input[type='range']::-webkit-slider-thumb {
--webkit-appearance: none;
+.range-scale {
+  position: relative;
 }
 
-.scale-progress {
-  width: 226px;
+.input-range[type='range'] {
+  width: 288px;
+  height: 4px;
+  overflow: hidden;
+  outline: none;
+  opacity: 0.3;
+}
+
+.input-range[type='range'],
+.input-range[type='range']::-webkit-slider-runnable-track,
+.input-range[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.range-progress {
+  width: 215px;
   height: 4px;
   background-color: #ffffff;
-  position: relative;
-  bottom: -2px;
-  right: -3px;
+  position: absolute;
+  top: 13px;
 }
 
-.scale-progress::before {
-  content: "";
-  display: block;
+.range-thumb {
   position: absolute;
   width: 20px;
   height: 20px;
-  border-radius: 4px;
   background-color: #ffffff;
-  top: -7px;
-  left: 206px;
+  border-radius: 5px;
+  border: none;
 }
 
-.scale-progress::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  background-color: #ffffff;
-  top: -7px;
-  left: -1px;
+.thumb-min {
+  top: -8px;
+}
+
+.thumb-max {
+  top: -8px;
+  left: 207px;
 }
 
 .filter-button {
@@ -754,6 +771,13 @@ input[type='range']::-webkit-slider-thumb {
   height: 49px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  padding-left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../images/svg/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 258px 50%;
 }
 
 .cards-view-list {

@@ -1364,6 +1364,8 @@ input[type='number'] {
 .button-field:focus svg {
   border: 3px solid #82B3D3;
   border-radius: 4px;
+  fill: #000000;
+  fill-opacity: 1;
 }
 
 .button-minus {
@@ -1384,13 +1386,20 @@ input[type='number'] {
   padding: 18px;
 }
 
-.tooltip-toggle {
+.tooltip {
   position: relative;
-  top: 3px;
+  width: 26px;
+  height: 26px;
+  margin-right: 46px;
+}
+
+.tooltip-toggle {
+  position: absolute;
   background-image: url("../images/svg/tooltip.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #83B3D3;
+  display: inline-block;
   width: 26px;
   height: 26px;
   border-radius: 50%;
@@ -1411,6 +1420,7 @@ input[type='number'] {
   text-align: start;
   color: #ffffff;
   background-color: #333333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   padding: 15px 18px 18px 22px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -1427,7 +1437,8 @@ input[type='number'] {
   left: 49%;
   transform: rotate(45deg) translateX(-50%);
 }
-/* открыть окно */
-.tooltip-text-opened {
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
   display: block;
 }

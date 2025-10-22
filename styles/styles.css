@@ -704,7 +704,9 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  max-width: 1060px;
 }
 
 .link-home:hover {
